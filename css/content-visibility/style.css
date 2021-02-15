@@ -1,0 +1,23 @@
+html {
+  font-size: 46px;
+}
+
+body {
+  background: #fdfbf5;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "system-ui", sans-serif;
+  box-sizing: border-box;
+  max-width: 1000px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.content-block {
+  content-visibility: auto;
+  contain-intrinsic-size: 700px;
+}
+
+.content-block  img {
+  width: 80%;
+}
