@@ -1,0 +1,8 @@
+@keyframes bubble {
+    from {
+        padding: 16px 24px;
+    }
+    to {
+        padding: 24px 32px;
+    }
+}
