@@ -1,10 +1,14 @@
 function showPaintTimings() {
-    if (window.performance) {
-        let performance = window.performance;
-        let performanceEntries = performance.getEntriesByType('paint');
-        performanceEntries.forEach(performanceEntry => {
-            console.log(`The time to ${performanceEntry.name} was ${performanceEntry.startTime} ms.`);
-        });
+    if ('performance' in window) {
+        window.addEventListener('load', () => {
+            const paintMetrics = performance.getEntriesByType('paint');
+
+            if (paintMetrics && paintMetrics.length > 0) {
+                paintMetrics.forEach(paintMetric => {
+                    console.log(`The time to ${paintMetric.name} was ${paintMetric.startTime} ms`);
+                })
+            }
+        })
     } else {
         console.log('Performance timing isn\'t supported.');
     }
